@@ -1,0 +1,80 @@
+<template>
+	<div class="w-full relative -mt-12 -mr-3">
+		<img class="absolute w-full logo" alt="l" src="~/assets/images/logo-min.png"/>
+		<img class="absolute w-full parasol" alt="l" src="~/assets/images/logo_p-min.png"/>
+		<img class="absolute w-full token" alt="l" src="~/assets/images/logo_q-min.png"/>
+	</div>
+</template>
+<script>
+export default {
+	name: "MainIllustration"
+}
+</script>
+
+<style scoped>
+div {
+	position: relative;
+}
+
+.logo {
+	animation: logo 15s linear infinite;
+	z-index: 1;
+}
+
+.parasol {
+	animation: parasol 20s linear infinite;
+	z-index: 0;
+}
+
+.token {
+	animation: token 15s linear infinite;
+	z-index: 2;
+}
+
+
+@keyframes logo {
+	0% {
+		transform: rotate(0deg) translateY(-20px) rotate(0deg) scale(1);
+		filter: brightness(100%);
+	}
+	50% {
+		transform: rotate(0deg) translateY(-10px) rotate(0deg) scale(1);
+		filter: brightness(110%);
+	}
+	100% {
+		transform: rotate(0deg) translateY(-20px) rotate(0deg) scale(1);
+		filter: brightness(100%);
+	}
+}
+
+@keyframes parasol {
+	0% {
+		transform: rotate(0deg) translateX(5px) rotate(0deg) scale(0.95);
+		filter: blur(1px);
+	}
+	50% {
+		transform: rotate(180deg) translateX(10px) rotate(-180deg) scale(1);
+		filter: blur(1px);
+	}
+	100% {
+		transform: rotate(360deg) translateX(5px) rotate(-360deg) scale(0.95);
+		filter: blur(1px);
+	}
+}
+
+@keyframes token {
+	0% {
+		transform: rotate(0deg) translateX(5px) rotate(0deg) scale(0.95);
+		filter: brightness(100%);
+	}
+	50% {
+		transform: rotate(180deg) translateX(10px) rotate(-180deg) scale(1);
+		filter: brightness(110%);
+	}
+	100% {
+		transform: rotate(360deg) translateX(5px) rotate(-360deg) scale(0.95);
+		filter: brightness(100%);
+	}
+}
+
+</style>
